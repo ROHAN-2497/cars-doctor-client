@@ -2,7 +2,7 @@ import person from "../../../assets/images/about_us/person.jpg";
 import parts from "../../../assets/images/about_us/parts.jpg";
 const About = () => {
   return (
-    <div className="hero min-h-screen bg-slate-200  mb-20">
+    <div className="hero min-h-screen  mb-20">
       <div className="hero-content flex-col lg:flex-row">
         <div className="lg:w-1/2 relative ml-[100px] ml-[65px] ">
           <img src={person} className="w-3/4 h-[473px] rounded-lg shadow-2xl" />

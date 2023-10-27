@@ -6,7 +6,7 @@ const Login = () => {
   };
   return (
     <div className="hero min-h-screen ">
-      <div className="hero-content flex-col lg:flex-row ">
+      <div className="hero-content flex-col lg:flex-row">
         <div className=" mr-20 w-1/2">
           <img src={img} alt="" />
         </div>
