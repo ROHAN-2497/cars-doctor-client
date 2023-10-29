@@ -1,8 +1,20 @@
 import { Link } from "react-router-dom";
 import img from "../../assets/images/login/login.svg";
+import { createContext, useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 const Login = () => {
+  const signIn = useContext(AuthContext);
   const handleLogin = (event) => {
     event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(email, password);
+    signIn(email, password)
+      .then((result) => {
+        const user = result.user;
+      })
+      .catch((error) => console.log(error));
   };
   return (
     <div className="hero min-h-screen ">
@@ -51,7 +63,11 @@ const Login = () => {
               />
             </div>
             <p>
-             New To here <Link className="text-orange-500 font-bold" to="/signup"> Sign Up</Link>
+              New To here{" "}
+              <Link className="text-orange-500 font-bold" to="/signup">
+                {" "}
+                Sign Up
+              </Link>
             </p>
           </form>
         </div>

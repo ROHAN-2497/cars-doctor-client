@@ -1,9 +1,25 @@
 import { Link } from "react-router-dom";
 import img from "../../assets/images/login/login.svg";
+import { createContext, useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const SignUp = () => {
+  const { createUser } = useContext(AuthContext);
   const handleSignUp = (event) => {
     event.preventDefault();
+    const form = event.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(name, email, password);
+    createUser(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .then((error) => {
+        console.log(error);
+      });
   };
   return (
     <div>
@@ -42,7 +58,9 @@ const SignUp = () => {
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text font-semibold">Confirm Password</span>
+                  <span className="label-text font-semibold">
+                    Confirm Password
+                  </span>
                 </label>
                 <input
                   type="password"
@@ -60,8 +78,11 @@ const SignUp = () => {
                 />
               </div>
               <p>
-               Already Have an Account? {" "}
-                 <Link to="/login" className="text-1xl text-orange-500 font-bold">
+                Already Have an Account?{" "}
+                <Link
+                  to="/login"
+                  className="text-1xl text-orange-500 font-bold"
+                >
                   {" "}
                   Login
                 </Link>
