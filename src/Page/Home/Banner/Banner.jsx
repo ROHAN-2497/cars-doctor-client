@@ -12,26 +12,26 @@ const Banner = () => {
         <div id="slide1" className="carousel-item relative w-full">
           <img src={banner1} className="w-full rounded-xl" />
           <div className="absolute rounded-xl flex items-center left-0 h-full top-0  bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
-            <div className="text-white ml-[100px] space-y-7 pl-12 w-1/2">
-              <h1 className="text-6xl font-bold ">
-                Affordable
-                <br /> Price For Car Servicing
-              </h1>
-              <p className="mb-7">
-                There are many variations of passages of available, but the
-                majority have suffered alteration in some form
-              </p>
+              <div className="text-white ml-[100px] space-y-7 pl-12 w-1/2">
+                <h1 className="text-6xl font-bold ">
+                  Affordable
+                  <br /> Price For Car Servicing
+                </h1>
+                <p className="mb-7">
+                  There are many variations of passages of available, but the
+                  majority have suffered alteration in some form
+                </p>
 
-              <div>
-                <button className="btn btn-warning text-white mr-5">
-                  Discover More
-                </button>
-                <button className="btn btn-outline text-white">
-                  Latest Project
-                </button>
+                <div>
+                  <button className="btn btn-warning text-white mr-5">
+                    Discover More
+                  </button>
+                  <button className="btn btn-outline text-white">
+                    Latest Project
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
           <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0 ">
             <a href="#slide6" className="btn btn-circle mr-5">
               ❮
